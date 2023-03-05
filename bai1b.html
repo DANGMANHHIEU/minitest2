@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1 </title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('nhập số bất kì'));
+    // nhỏ hơn 1 nhập lại số
+    while (n < 1) {
+        n = parseInt(prompt('nhập số bất kì'));
+    }
+    //tính giai thừa
+    let i ;
+    let sum = 1 ;
+    for(i=1 ; i <= n; i++){
+        sum *= i ;
+    }
+    document.write(sum);
+
+</script>
+
+</body>
+</html>
