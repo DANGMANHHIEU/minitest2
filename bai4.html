@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4</title>
+</head>
+<body>
+<button type="button" onclick="arrlength()">Length</button>
+<button type="button" onclick="Arr()">Array</button>
+<button type="button" onclick="total()">Total</button>
+<button type="button" onclick="snt()">SNT</button></br>
+<p id="demo"></p>
+<script>
+
+    let array = [];
+    // nhập độ dài mảng
+    function arrlength() {
+        let n = parseInt(prompt('độ dài'));
+        array.length = n ;
+    }
+    // nhập phần tử mảng
+    function Arr(){
+        for(let i = 0; i< array.length ; i++){
+            array[i] = parseInt(prompt('số'));
+        }
+        document.getElementById('demo').innerHTML = ('số lượng phần tử:'+ array);
+    }
+    // tính số chẵn và tổng các số chẵn
+    function total() {
+        let x = 0;
+        let n = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                n += array[i];
+                x++;
+            }
+        }
+        document.getElementById('demo').innerHTML = ('số chẵn:' + x+'<br>' + 'toatal:' + n);
+    }
+    // tìm số nguyên tố và tính tổng SNT
+    function snt(){
+        let n = 0;
+        let i ;
+        let j ;
+        for(i = 0 ;i < array.length; i++) {
+            let check = true;
+            if (array[i] < 2) {
+                check = false;
+            } else{
+                for (j = 2; j < array[i]; j++) {
+                    if (array[i] % j == 0) {
+                        check = false;
+                        break;
+                    }
+                }
+        }
+            if(check)
+                n += array[i];
+        }
+        document.getElementById('demo').innerHTML =('tổng SNT:'+ n);
+    }
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
